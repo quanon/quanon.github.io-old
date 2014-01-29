@@ -1,0 +1,100 @@
+@import "compass";
+@import "font";
+@import "color";
+
+body {
+  background-color: $purple;
+  font-family: "mplus-1p-thin" !important;
+  color: $white;
+}
+
+.title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.title__logo {
+  width: auto;
+  max-height: 150px;
+  @include border-radius(100%);
+}
+
+.balloon {
+  font-size: $font-xlarge;
+  background-color: $white;
+  color: $purple;
+}
+
+.title__heading {
+  font-size: $font-xxxlarge;
+}
+
+.title__explanation {
+  font-size: $font-meduim;
+}
+
+.partition {
+  margin: 20px 0;
+}
+
+.intro,
+.favorite {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.intro__heading,
+.wife__heading,
+.favorite__heading {
+  font-size: $font-xxlarge;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.intro__content {
+  font-size: $font-xlarge;
+}
+
+.wife__content__name {
+  font-size: $font-xlarge;
+  color: $white;
+
+  &:hover, &:visited {
+    color: $white;
+  }
+}
+
+.wife__content__picture {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  @include border-radius(10px);
+}
+
+.favorite__item {
+  margin: 15px 0;
+  padding: 10px;
+  border: solid 1px #FFF;
+  @include border-radius(10px);
+
+  &:hover {
+    @include box-shadow(0px 0px 20px $white);
+  }
+}
+
+.favorite__item__heading {
+  font-size: $font-large;
+  margin-bottom: 5px;
+}
+
+.favorite__item__content {
+  font-size: $font-meduim;
+}
+
+.footer {
+  margin: 20px 10px;
+  font-size: $font-meduim;
+  
+  a:hover, a:visited {
+    color: $white;
+  }
+}

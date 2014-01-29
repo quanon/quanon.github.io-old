@@ -1,0 +1,77 @@
+.title.container
+  .row
+    .col-md-8.col-md-offset-2
+      .text-center
+        %img.title__logo{ src: "images/azumarill.png" }
+  .row
+    .col-md-8.col-md-offset-2
+      .title__heading.text-center= "QUANON の隠れ家"
+      .title__explanation.text-center= "QUANON ちゃんのページだよ。"
+    .col-md-2
+
+.intro.wife.container
+  .row
+    .col-md-6
+      .intro__heading
+        %span.glyphicon.glyphicon-user
+        %span= "自己紹介"
+      .intro__content
+        - data.introductions.each do |introduction|
+          %p= introduction
+
+    .col-md-6
+      .wife__heading
+        %span.glyphicon.glyphicon-heart
+        %span= "嫁"
+      .wife__content
+        %a.wife__content__name{ href: "http://wiki.puella-magi.net/Kyoko_Sakura" }= "佐倉杏子"
+      %img.wife__content__picture{ src: "images/kyoko.png" }
+
+.partition
+
+.favorite.container
+  .row
+    .col-md-12
+      .favorite__heading
+        %span.glyphicon.glyphicon-star
+        %span= "好きなもの"
+  .row
+    .col-md-4
+      = partial :favorite_items, locals: { title: "食べ物", items: "foods" }
+    .col-md-4
+      = partial :favorite_items, locals: { title: "飲み物", items: "drinks" }
+    .col-md-4
+      = partial :favorite_items, locals: { title: "乗り物", items: "vehicles" }
+  .row
+    .col-md-6
+      = partial :favorite_items, locals: { title: "アニメ", items: "animes" }
+    .col-md-6
+      = partial :favorite_items, locals: { title: "キャラクター", items: "characters", rows: 12 }
+  .row
+    .col-md-6
+      = partial :favorite_items, locals: { title: "音楽", items: "musics" }
+    .col-md-6
+      = partial :favorite_items, locals: { title: "映画", items: "movies" } 
+  .row 
+    .col-md-6
+      = partial :favorite_items, locals: { title: "小説", items: "novels" }
+    .col-md-6
+      = partial :favorite_items, locals: { title: "コミック", items: "comics" }  
+  .row 
+    .col-md-6
+      = partial :favorite_items, locals: { title: "ゲーム", items: "games" }
+    .col-md-3
+      = partial :favorite_items, locals: { title: "ブランド", items: "brands" }
+    .col-md-3
+      = partial :favorite_items, locals: { title: "生き物", items: "animals" }
+  .row 
+    .col-md-12
+      = partial :favorite_items, locals: { title: "言葉", items: "sayings", is_divided: false }
+
+.partition
+
+.container
+  .row
+    .col-md-12
+      .footer.text-right
+        %a{ href: "https://twitter.com/quanon86" }= "@quanon86"

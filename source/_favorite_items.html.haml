@@ -1,0 +1,21 @@
+- rows = locals[:rows] || 10
+- is_divided = locals[:is_divided] || true
+
+.favorite__item
+  .favorite__item__heading= title
+  .favorite__item__content
+    .row
+      - if is_divided
+        - divided_items = divide_array(data.favorites.send(items).sort, rows)
+        - column_length = 12 / divided_items.length
+        - divided_items.each do |items|
+          %div{ class: "col-sm-#{column_length}" }
+            %ul
+              - items.each do |item|
+                %li= item 
+      - else
+        - items = data.favorites.send(items).sort
+        .col-sm-12
+          %ul
+            - items.each do |item|
+              %li= item
