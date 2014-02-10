@@ -4,7 +4,7 @@
 
 body {
   background-color: $purple;
-  font-family: "mplus-1p-thin" !important;
+  font-family: "mplus-1p-thin";
   color: $white;
 }
 
@@ -93,7 +93,7 @@ body {
 .footer {
   margin: 20px 10px;
   font-size: $font-meduim;
-  
+
   a:hover, a:visited {
     color: $white;
   }
