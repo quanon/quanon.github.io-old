@@ -13,7 +13,7 @@
   .row
     .col-md-6
       .intro__heading
-        %span.glyphicon.glyphicon-user
+        %i.fa.fa-smile-o
         %span= "自己紹介"
       .intro__content
         - data.introductions.each do |introduction|
@@ -21,7 +21,7 @@
 
     .col-md-6
       .wife__heading
-        %span.glyphicon.glyphicon-heart
+        %i.fa.fa-heart
         %span= "嫁"
       .wife__content
         %a.wife__content__name{ href: "http://wiki.puella-magi.net/Kyoko_Sakura" }= "佐倉杏子"
@@ -33,7 +33,7 @@
   .row
     .col-md-12
       .favorite__heading
-        %span.glyphicon.glyphicon-star
+        %i.fa.fa-star
         %span= "好きなもの"
   .row
     .col-md-4
@@ -51,20 +51,20 @@
     .col-md-6
       = partial :favorite_items, locals: { title: "音楽", items: "musics" }
     .col-md-6
-      = partial :favorite_items, locals: { title: "映画", items: "movies" } 
-  .row 
+      = partial :favorite_items, locals: { title: "映画", items: "movies" }
+  .row
     .col-md-6
       = partial :favorite_items, locals: { title: "小説", items: "novels" }
     .col-md-6
-      = partial :favorite_items, locals: { title: "コミック", items: "comics" }  
-  .row 
+      = partial :favorite_items, locals: { title: "コミック", items: "comics" }
+  .row
     .col-md-6
       = partial :favorite_items, locals: { title: "ゲーム", items: "games" }
     .col-md-3
       = partial :favorite_items, locals: { title: "ブランド", items: "brands" }
     .col-md-3
       = partial :favorite_items, locals: { title: "生き物", items: "animals" }
-  .row 
+  .row
     .col-md-12
       = partial :favorite_items, locals: { title: "言葉", items: "sayings", is_divided: false }
 
