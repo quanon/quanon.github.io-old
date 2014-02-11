@@ -35,12 +35,12 @@
       %a.tabs__tab{ href: "#favorites", data: { toggle: "tab" }  }
         %span.tabs__tab__name= "My Favorites"
     %li
-      %a.tabs__tab{ href: "#best10", data: { toggle: "tab" }  }
-        %span.tabs__tab__name= "My Best 10"
+      %a.tabs__tab{ href: "#selections", data: { toggle: "tab" }  }
+        %span.tabs__tab__name= "My Best Selection 10"
 
   .tab-content
     = partial :favorites
-    = partial :best10
+    = partial :selections
 
     .partition
 

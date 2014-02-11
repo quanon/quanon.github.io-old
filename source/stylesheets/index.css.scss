@@ -46,7 +46,7 @@ body {
 .intro__heading,
 .wife__heading,
 .favorite__heading,
-.best10__heading {
+.selection__heading {
   font-size: $font-xxlarge;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -78,7 +78,7 @@ body {
 .tabs__tab {
   border: solid 1px #FFF !important;
 
-  &:visited {
+  &:link, &:visited {
     color: $white;
   }
 }
@@ -87,7 +87,8 @@ body {
   font-size: $font-meduim;
 }
 
-.favorite__item {
+.favorite__item,
+.selection__item {
   margin: 15px 0;
   padding: 10px;
   border: solid 1px #FFF;
@@ -98,24 +99,27 @@ body {
   }
 }
 
-.favorite__item__heading {
+.favorite__item__heading,
+.selection__item__heading {
   font-size: $font-large;
   margin-bottom: 5px;
 }
 
-.favorite__item__content {
+.favorite__item__content,
+.selection__item__content {
   font-size: $font-meduim;
 }
 
-.best10__explanation {
+.selection__explanation {
   font-size: $font-meduim;
+  margin-bottom: 10px;
 }
 
 .footer {
   margin: 20px 10px;
   font-size: $font-meduim;
 
-  a:hover, a:visited {
+  a:link, a:hover, a:visited {
     color: $white;
   }
 }

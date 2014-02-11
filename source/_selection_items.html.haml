@@ -1,0 +1,9 @@
+.selection__item
+  .selection__item__heading= title
+  .selection__item__content
+    .row
+      - items = data.selections.send(items)
+      .col-sm-12
+        %ol
+          - items.each do |item|
+            %li= item
