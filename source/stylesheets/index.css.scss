@@ -45,7 +45,8 @@ body {
 
 .intro__heading,
 .wife__heading,
-.favorite__heading {
+.favorite__heading,
+.best10__heading {
   font-size: $font-xxlarge;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -70,6 +71,22 @@ body {
   @include border-radius(10px);
 }
 
+.tabs__tab {
+  border: solid 1px #FFF !important;
+}
+
+.tabs__tab {
+  border: solid 1px #FFF !important;
+
+  &:visited {
+    color: $white;
+  }
+}
+
+.tabs__tab__name {
+  font-size: $font-meduim;
+}
+
 .favorite__item {
   margin: 15px 0;
   padding: 10px;
@@ -90,6 +107,10 @@ body {
   font-size: $font-meduim;
 }
 
+.best10__explanation {
+  font-size: $font-meduim;
+}
+
 .footer {
   margin: 20px 10px;
   font-size: $font-meduim;
@@ -98,3 +119,4 @@ body {
     color: $white;
   }
 }
+

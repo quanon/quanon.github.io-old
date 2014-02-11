@@ -1,0 +1,38 @@
+.tab-pane.active#favorites
+  .row
+    .col-md-12
+      .favorite__heading
+        %i.fa.fa-star
+        %span= "好きなもの"
+  .row
+    .col-md-4
+      = partial :favorite_items, locals: { title: "食べ物", items: "foods" }
+    .col-md-4
+      = partial :favorite_items, locals: { title: "飲み物", items: "drinks" }
+    .col-md-4
+      = partial :favorite_items, locals: { title: "乗り物", items: "vehicles" }
+  .row
+    .col-md-6
+      = partial :favorite_items, locals: { title: "アニメ", items: "animes" }
+    .col-md-6
+      = partial :favorite_items, locals: { title: "キャラクター", items: "characters", rows: 12 }
+  .row
+    .col-md-6
+      = partial :favorite_items, locals: { title: "音楽", items: "musics" }
+    .col-md-6
+      = partial :favorite_items, locals: { title: "映画", items: "movies" }
+  .row
+    .col-md-6
+      = partial :favorite_items, locals: { title: "小説", items: "novels" }
+    .col-md-6
+      = partial :favorite_items, locals: { title: "コミック", items: "comics" }
+  .row
+    .col-md-6
+      = partial :favorite_items, locals: { title: "ゲーム", items: "games" }
+    .col-md-3
+      = partial :favorite_items, locals: { title: "ブランド", items: "brands" }
+    .col-md-3
+      = partial :favorite_items, locals: { title: "生き物", items: "animals" }
+  .row
+    .col-md-12
+      = partial :favorite_items, locals: { title: "言葉", items: "sayings", is_divided: false }

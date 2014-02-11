@@ -21,3 +21,7 @@ $(document).ready ->
       boxShadow: 0
       backgroundColor: null
       color: null
+
+  $(".tabs__tab").click (e) ->
+    e.preventDefault()
+    $(@).tab("show")
