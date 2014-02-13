@@ -1,13 +1,15 @@
 - klass = locals[:klass]
+- items = locals[:items]
 .selection__item
   .selection__item__heading
     - if klass
       %i{ class: klass }
     %span= title
   .selection__item__content
-    .row
-      - items = data.selections.send(items)
-      .col-sm-12
-        %ol
-          - items.each do |item|
-            %li= item
+    - if items.present?
+      .row
+        - items = data.selections.send(items)
+        .col-sm-12
+          %ol
+            - items.each do |item|
+              %li= item

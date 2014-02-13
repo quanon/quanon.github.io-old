@@ -7,10 +7,16 @@
       .selection__explanation= "※ 気分によって多少変動します。 _(:3｣∠)_"
 
   .row
-    .col-md-6
+    .col-md-4
       = partial :selection_items, locals: { title: "ミスチルの歌", items: "mrchildren" }
-    .col-md-6
+    .col-md-4
       = partial :selection_items, locals: { title: "スピッツの歌", items: "spitz" }
+    .col-md-4
+      = partial :selection_items, locals: { title: "※ 未定" }
   .row
-    .col-md-6
+    .col-md-4
       = partial :selection_items, locals: { title: "飲食店", items: "restaurants" }
+    .col-md-4
+      = partial :selection_items, locals: { title: "ポケモン", items: "pokemon" }
+    .col-md-4
+      = partial :selection_items, locals: { title: "※ 未定" }
