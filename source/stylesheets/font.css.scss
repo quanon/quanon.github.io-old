@@ -3,6 +3,11 @@
   src: url('../fonts/mplus-1p-thin.ttf') format("truetype");
 }
 
+@font-face {
+  font-family: "mplus-1p-regular";
+  src: url('../fonts/mplus-1p-regular.ttf') format("truetype");
+}
+
 $font-meduim:   120%;
 $font-large:    150%;
 $font-xlarge:   200%;
