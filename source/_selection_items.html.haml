@@ -1,5 +1,9 @@
+- klass = locals[:klass]
 .selection__item
-  .selection__item__heading= title
+  .selection__item__heading
+    - if klass
+      %i{ class: klass }
+    %span= title
   .selection__item__content
     .row
       - items = data.selections.send(items)
