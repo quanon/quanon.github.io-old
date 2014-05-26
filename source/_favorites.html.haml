@@ -12,10 +12,11 @@
     .col-md-4
       = partial :favorite_items, locals: { title: "乗り物", items: "vehicles" }
   .row
-    .col-md-6
+    .col-md-12
       = partial :favorite_items, locals: { title: "アニメ", items: "animes" }
-    .col-md-6
-      = partial :favorite_items, locals: { title: "キャラクター", items: "characters", rows: 12 }
+  .row
+    .col-md-12
+      = partial :favorite_items, locals: { title: "キャラクター", items: "characters" }
   .row
     .col-md-6
       = partial :favorite_items, locals: { title: "音楽", items: "musics" }
