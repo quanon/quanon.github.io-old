@@ -6,37 +6,37 @@
         %span= "好きなもの"
   .row
     .col-md-4
-      = partial :favorite_items, locals: { title: "食べ物", items: "foods" }
+      = favorite_items("食べ物", "foods")
     .col-md-4
-      = partial :favorite_items, locals: { title: "飲み物", items: "drinks" }
+      = favorite_items("飲み物", "drinks")
     .col-md-4
-      = partial :favorite_items, locals: { title: "乗り物", items: "vehicles" }
+      = favorite_items("乗り物", "vehicles")
   .row
     .col-md-12
-      = partial :favorite_items, locals: { title: "アニメ", items: "animes" }
+      = favorite_items("アニメ", "animes")
   .row
     .col-md-12
-      = partial :favorite_items, locals: { title: "キャラクター", items: "characters" }
+      = favorite_items("キャラクター", "characters")
   .row
     .col-md-12
-      = partial :favorite_items, locals: { title: "声優", items: "voice_actors" }
+      = favorite_items("声優", "voice_actors")
   .row
     .col-md-6
-      = partial :favorite_items, locals: { title: "音楽", items: "musics" }
+      = favorite_items("音楽", "musics")
     .col-md-6
-      = partial :favorite_items, locals: { title: "映画", items: "movies" }
+      = favorite_items("映画", "movies")
   .row
     .col-md-6
-      = partial :favorite_items, locals: { title: "小説", items: "novels" }
+      = favorite_items("小説", "novels")
     .col-md-6
-      = partial :favorite_items, locals: { title: "コミック", items: "comics" }
+      = favorite_items("コミック", "comics")
   .row
     .col-md-6
-      = partial :favorite_items, locals: { title: "ゲーム", items: "games" }
+      = favorite_items("ゲーム", "games")
     .col-md-3
-      = partial :favorite_items, locals: { title: "ブランド", items: "brands" }
+      = favorite_items("ブランド", "brands")
     .col-md-3
-      = partial :favorite_items, locals: { title: "生き物", items: "animals" }
+      = favorite_items("生き物", "animals")
   .row
     .col-md-12
-      = partial :favorite_items, locals: { title: "言葉", items: "sayings", is_divided: false }
+      = favorite_items("言葉", "sayings", false)

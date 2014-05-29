@@ -39,10 +39,25 @@
 # activate :livereload
 
 # Methods defined in the helpers block are available in templates
-helpers do
+
+module MiddlemanHelper
+  def favorite_items(title, key, is_divided = true)
+    locals = { title: title, items: key, is_divided: is_divided }
+    partial(:favorite_items, locals: locals)
+  end
+
+  def selection_items(title, key)
+    locals = { title: title, items: key }
+    partial(:selection_items, locals: locals)
+  end
+
   def divide_array(array, number)
     array.each_slice(number).to_a
   end
+end
+
+helpers do
+  include MiddlemanHelper
 end
 
 set :css_dir, 'stylesheets'

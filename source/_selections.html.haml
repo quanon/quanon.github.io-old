@@ -8,16 +8,16 @@
 
   .row
     .col-md-4
-      = partial :selection_items, locals: { title: "ミスチルの歌", items: "mrchildren" }
+      = selection_items("ミスチルの歌", "mrchildren")
     .col-md-4
-      = partial :selection_items, locals: { title: "スピッツの歌", items: "spitz" }
+      = selection_items("スピッツの歌", "spitz")
     .col-md-4
-      = partial :selection_items, locals: { title: "水樹奈々の歌", items: "nana_mizuki" }
+      = selection_items("水樹奈々の歌", "nana_mizuki")
   .row
     .col-md-4
-      = partial :selection_items, locals: { title: "飲食店", items: "restaurants" }
+      = selection_items("飲食店", "restaurants")
     .col-md-4
-      = partial :selection_items, locals: { title: "ポケモン", items: "pokemon" }
+      = selection_items("ポケモン", "pokemon")
   .row
     .col-md-6
-      = partial :selection_items, locals: { title: "アニメ・ゲームソング", items: "anime_songs" }
+      = selection_items("アニメ・ゲームソング", "anime_songs")
