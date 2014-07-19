@@ -27,7 +27,7 @@
         %a.wife__content__name{ href: "http://wiki.puella-magi.net/Kyoko_Sakura" }= "佐倉杏子"
       %img.wife__content__picture{ src: "images/kyoko.png" }
 
-.partition
+.partition-20
 
 .container
   %ul.nav.nav-tabs.tabs
@@ -37,10 +37,14 @@
     %li
       %a.tabs__tab{ href: "#selections", data: { toggle: "tab" }  }
         %span.tabs__tab__name= "My Best Selection 10"
+    %li
+      %a.tabs__tab{ href: "#mottos", data: { toggle: "tab" }  }
+        %span.tabs__tab__name= "My Mottos"
 
   .tab-content
     = partial :favorites
     = partial :selections
+    = partial :mottos
 
     .partition
 

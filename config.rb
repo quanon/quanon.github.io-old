@@ -54,6 +54,10 @@ module MiddlemanHelper
   def divide_array(array, number)
     array.each_slice(number).to_a
   end
+
+  def n2br(string)
+    string.gsub("\n", "<br />").html_safe
+  end
 end
 
 helpers do

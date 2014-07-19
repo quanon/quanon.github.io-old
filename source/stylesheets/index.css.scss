@@ -33,7 +33,11 @@ body {
   font-size: $font-meduim;
 }
 
-.partition {
+.partition-10 {
+  margin: 10px 0;
+}
+
+.partition-20 {
   margin: 20px 0;
 }
 
@@ -46,7 +50,8 @@ body {
 .intro__heading,
 .wife__heading,
 .favorite__heading,
-.selection__heading {
+.selection__heading,
+.motto__heading {
   font-size: $font-xxlarge;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -91,7 +96,8 @@ body {
 }
 
 .favorite__item,
-.selection__item {
+.selection__item,
+.motto__item {
   margin: 15px 0;
   padding: 10px;
   border: solid 1px #FFF;
@@ -103,14 +109,24 @@ body {
 }
 
 .favorite__item__heading,
-.selection__item__heading {
+.selection__item__heading,
+.motto__item__heading {
   font-size: $font-large;
   margin-bottom: 5px;
 }
 
 .favorite__item__content,
-.selection__item__content {
+.selection__item__content,
+.motto__item__content {
   font-size: $font-meduim;
+}
+
+.motto__item__content__saying {
+  font-size: $font-meduim;
+}
+
+.motto__item__content__source {
+  font-size: $font-small;
 }
 
 .selection__explanation {
