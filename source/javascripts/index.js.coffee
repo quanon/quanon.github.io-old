@@ -15,18 +15,6 @@ do (jQuery) ->
   $.fn.konami.defaults =
     command: [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 
-konami = (handler) ->
-  keys = []
-  command = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
-
-  $(document).on "keydown", (event) ->
-    keys.push event.which
-    keys.shift() if keys.length > command.length
-
-    if _.isEqual keys, command
-      handler()
-      keys = []
-
 $(document).ready ->
 
   $(".title__logo").balloon
