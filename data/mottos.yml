@@ -1,9 +1,6 @@
 - saying: 合縁奇縁
   source: 日本のことわざ
 
-- saying: 好きこそものの上手なれ
-  source: 日本のことわざ
-
 - saying: 子曰く、人の己を知らざるを患えず、人を知らざるを患う。
   source: 論語 学而第一
 
@@ -12,8 +9,20 @@
     己を知ること莫きを患えず、知らるべきことを為すを求む。
   source: 論語 里仁第四
 
-- saying: あしたっていまさッ！
-  source: ポコ (ジョジョの奇妙な冒険 第一部「ファントムブラッド」)
+- saying: |
+    子曰く、これを知る者はこれを好む者に如かず。
+    これを好む者はこれを楽しむ者に如かず。
+  source: 論語 雍也第六
+
+- saying: |
+    You can lead a horse to water but you can't make him drink.
+  source: 海外のことわざ
+
+- saying: |
+    O God, give us serenity to accept what cannot be changed,
+    courage to change what should be changed,
+    and wisdom to distinguish the one from the other.
+  source: ラインホルド・ニーバー
 
 - saying: |
     この道を行けばどうなるものか
@@ -21,6 +30,15 @@
     踏み出せばその一足が道となり その一足が道となる
     迷わず行けよ 行けばわかるさ
   source: アントニオ猪木
+
+- saying: あしたっていまさッ！
+  source: ポコ (ジョジョの奇妙な冒険 第一部「ファントムブラッド」)
+
+- saying: |
+    行け、シモン。
+    「もし」とか「たら」とか「れば」とか、そんな思いに惑わされんな。
+    自分が選んだ一つのことが、お前の宇宙の真実だ
+  source: カミナ (天元突破グレンラガン)
 
 - saying: ねだるな、勝ち取れ、さすれば与えられん
   source: アドロック・サーストン (交響詩篇エウレカセブン)
@@ -36,13 +54,3 @@
     目を逸らしているだけじゃ、
     逃げたことにはならないんだよ
   source: 阿良々木暦の母 (＜物語＞シリーズ)
-
-- saying: |
-    O God, give us serenity to accept what cannot be changed,
-    courage to change what should be changed,
-    and wisdom to distinguish the one from the other.
-  source: ラインホルド・ニーバー
-
-- saying: |
-    You can lead a horse to water but you can't make him drink.
-  source: 海外のことわざ
