@@ -1,17 +1,17 @@
 .title.container
   .row
-    .col-md-8.col-md-offset-2
+    .col-sm-8.col-sm-offset-2
       .text-center
         %img.title__logo{ src: "images/azumarill.png" }
   .row
-    .col-md-8.col-md-offset-2
+    .col-sm-8.col-sm-offset-2
       .title__heading.text-center= "QUANON の隠れ家"
       .title__explanation.text-center= "QUANON ちゃんのページだよ。"
-    .col-md-2
+    .col-sm-2
 
 .intro.wife.container
   .row
-    .col-md-6
+    .col-sm-6
       .intro__heading
         %i.fa.fa-smile-o
         %span= "自己紹介"
@@ -19,7 +19,7 @@
         - data.introductions.each do |introduction|
           %p= introduction
 
-    .col-md-6
+    .col-sm-6
       .wife__heading
         %i.fa.fa-heart
         %span= "嫁"
@@ -50,6 +50,6 @@
 
     .container
       .row
-        .col-md-12
+        .col-sm-12
           .footer.text-right
             %a{ href: "https://twitter.com/quanon86" }= "@quanon86"

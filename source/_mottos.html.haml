@@ -1,6 +1,6 @@
 .tab-pane#mottos
   .row
-    .col-md-12
+    .col-sm-12
       .motto__heading
         %i.fa.fa-graduation-cap
         %span= "座右の銘"
@@ -10,5 +10,5 @@
   .row
     - divided_mottos.each do |mottos|
       - mottos.each do |motto|
-        .col-md-6
+        .col-sm-6
           = partial :motto, locals: { motto: motto }
