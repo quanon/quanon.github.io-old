@@ -18,25 +18,39 @@ $(document).ready ->
     doing = true
     $time.text(seconds)
 
-    explosionShort = new Audio('audios/explosion_short.mp3')
-    explosionLong  = new Audio('audios/explosion_long.mp3')
+    audios =
+      pop4: new Audio('audios/pop4.wav')
+      pop3: new Audio('audios/pop3.wav')
+      pop2: new Audio('audios/pop2.wav')
+      pop1: new Audio('audios/pop1.wav')
+      kyupon: new Audio('audios/kyupon.wav')
 
     timer = ->
       seconds--
       $time.text(seconds)
 
-      if seconds == 0
-        explosionLong.play()
+      if 15 < seconds <= 20
+        audios.pop4.load()
+        audios.pop4.play()
+      else if 10 < seconds <= 15
+        audios.pop3.load()
+        audios.pop3.play()
+      else if 5 < seconds <= 10
+        audios.pop2.load()
+        audios.pop2.play()
+      else if 0 < seconds <= 5
+        audios.pop1.load()
+        audios.pop1.play()
+      else if seconds == 0
+        audios.kyupon.load()
+        audios.kyupon.play()
         clearInterval(timerId)
         return
 
-      if seconds <= 50 && seconds % 10 == 0
-        explosionShort.play()
-
     blinker = ->
       if seconds == 0
-        clearInterval(blinkerId)
         $timer.removeClass('warning')
+        clearInterval(blinkerId)
         return
 
       if seconds <= 10
