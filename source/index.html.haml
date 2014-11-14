@@ -2,7 +2,7 @@
   .row
     .col-sm-8.col-sm-offset-2
       .text-center
-        %img.title__logo{ src: "images/azumarill.png" }
+        %img.title__logo.js-logo{ src: "images/azumarill.png" }
   .row
     .col-sm-8.col-sm-offset-2
       .title__heading.text-center= "QUANON の隠れ家"
@@ -40,11 +40,15 @@
     %li
       %a.tabs__tab{ href: "#mottos", data: { toggle: "tab" }  }
         %span.tabs__tab__name= "My Mottos"
+    %li
+      %a.tabs__tab{ href: "#tools", data: { toggle: "tab" }  }
+        %span.tabs__tab__name= "Tools"
 
   .tab-content
     = partial :favorites
     = partial :selections
     = partial :mottos
+    = partial :tools
 
     .partition
 

@@ -1,0 +1,11 @@
+.tab-pane#tools
+  .row
+    .col-sm-12
+      .tools__heading
+        %i.fa.fa-wrench
+        %span= 'ツール'
+
+  .row
+    - data.tools.each do |tool|
+      .col-sm-6
+        = partial :tool, locals: { tool: tool }

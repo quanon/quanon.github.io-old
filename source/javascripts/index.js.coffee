@@ -17,7 +17,7 @@ do (jQuery) ->
 
 $(document).ready ->
 
-  $(".title__logo").balloon
+  $(".js-logo").balloon
     contents: "トゥットゥルー♪<br />かのしぃ★です"
     position: "right"
     classname: "balloon"

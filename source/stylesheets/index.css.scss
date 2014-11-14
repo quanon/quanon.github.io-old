@@ -2,6 +2,13 @@
 @import "font";
 @import "color";
 
+@mixin white-link() {
+  a:link, a:hover, a:visited {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
 body {
   background-color: $purple;
   font-family: "mplus-1p-thin";
@@ -51,7 +58,8 @@ body {
 .wife__heading,
 .favorite__heading,
 .selection__heading,
-.motto__heading {
+.motto__heading,
+.tools__heading {
   font-size: $font-xxlarge;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -97,7 +105,8 @@ body {
 
 .favorite__item,
 .selection__item,
-.motto__item {
+.motto__item,
+.tool__item {
   margin: 15px 0;
   padding: 10px;
   border: solid 1px #FFF;
@@ -108,16 +117,22 @@ body {
   }
 }
 
+.tool__item {
+  @include white-link();
+}
+
 .favorite__item__heading,
 .selection__item__heading,
-.motto__item__heading {
+.motto__item__heading,
+.tool__item__heading {
   font-size: $font-large;
   margin-bottom: 5px;
 }
 
 .favorite__item__content,
 .selection__item__content,
-.motto__item__content {
+.motto__item__content,
+.tool__item__content {
   font-size: $font-meduim;
 }
 
@@ -138,7 +153,5 @@ body {
   margin: 20px 10px;
   font-size: $font-meduim;
 
-  a:link, a:hover, a:visited {
-    color: $white;
-  }
+  @include white-link();
 }
