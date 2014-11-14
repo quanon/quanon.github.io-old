@@ -1,4 +1,19 @@
 $(document).ready ->
+  ion.sound
+    sounds: [
+      name: 'pop21-1'
+    ,
+      name: 'pop21-2'
+    ,
+      name: 'pop21-3'
+    ,
+      name: 'pop21-4'
+    ,
+      name: 'pop22-2'
+    ]
+    path: 'audios/'
+    preload: true
+
   doing = false
   timerId = null
   blinkerId = null
@@ -18,32 +33,20 @@ $(document).ready ->
     doing = true
     $time.text(seconds)
 
-    audios =
-      pop4: new Audio('audios/pop4.wav')
-      pop3: new Audio('audios/pop3.wav')
-      pop2: new Audio('audios/pop2.wav')
-      pop1: new Audio('audios/pop1.wav')
-      kyupon: new Audio('audios/kyupon.wav')
-
     timer = ->
       seconds--
       $time.text(seconds)
 
       if 15 < seconds <= 20
-        audios.pop4.load()
-        audios.pop4.play()
+        ion.sound.play('pop21-4')
       else if 10 < seconds <= 15
-        audios.pop3.load()
-        audios.pop3.play()
+        ion.sound.play('pop21-3')
       else if 5 < seconds <= 10
-        audios.pop2.load()
-        audios.pop2.play()
+        ion.sound.play('pop21-2')
       else if 0 < seconds <= 5
-        audios.pop1.load()
-        audios.pop1.play()
+        ion.sound.play('pop21-1')
       else if seconds == 0
-        audios.kyupon.load()
-        audios.kyupon.play()
+        ion.sound.play('pop22-2', { volume: 1.0 })
         clearInterval(timerId)
         return
 
