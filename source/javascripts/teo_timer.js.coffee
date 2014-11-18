@@ -12,6 +12,7 @@ $(document).ready ->
       name: 'pop22-2'
     ]
     path: 'audios/'
+    volume: 1.0
     preload: true
 
   doing = false
@@ -20,6 +21,7 @@ $(document).ready ->
   $timer = $('.js-teo-timer')
   $time = $('.js-time')
   $time.html('<i class="fa fa-play-circle-o"></i>')
+  $teo = $('.js-teo-timer__logo')
 
   $timer.on 'click', ->
     if doing
@@ -44,9 +46,12 @@ $(document).ready ->
       else if 5 < seconds <= 10
         ion.sound.play('pop21-2')
       else if 0 < seconds <= 5
+        $teo.jrumble()
+        $teo.trigger('startRumble') if seconds == 5
         ion.sound.play('pop21-1')
       else if seconds == 0
-        ion.sound.play('pop22-2', { volume: 1.0 })
+        ion.sound.play('pop22-2')
+        $teo.trigger('stopRumble')
         clearInterval(timerId)
         return
 
