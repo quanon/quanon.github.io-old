@@ -14,21 +14,20 @@ class window.Timer
     _$time = options.$time
     _$logo = options.$logo
 
-    _initSounds.call @
-    _initClickEvent.call @
-
-    _$time.html('<i class="fa fa-play-circle-o"></i>')
+    _initSounds.call(@)
+    _initClickEvent.call(@)
+    _initTime.call(@)
 
     return
 
   # private
 
+  _initTime = =>
+    _$time.html('<i class="fa fa-play-circle-o"></i>')
+
   _initClickEvent = =>
     _$timer.on 'click', =>
-      if _doing
-        _stop.call @
-      else
-        _start.call @
+      if _doing then _stop.call(@) else _start.call(@)
       return
 
     return
@@ -44,9 +43,11 @@ class window.Timer
     return
 
   _stop = =>
-    clearInterval(_countdownId)
-    clearInterval(_blinkId)
-    _$time.html('<i class="fa fa-play-circle-o"></i>')
+    _clearCountdown.call(@)
+    _clearBlink.call(@)
+    _clearEffect.call(@)
+    _initTime.call(@)
+
     _doing = false
 
     return
@@ -74,8 +75,19 @@ class window.Timer
     _seconds--
     _$time.text(_seconds)
 
-    _doEffect.call @
-    clearInterval(_countdownId) if _seconds == 0
+    _doEffect.call(@)
+    _clearCountdown.call(@) if _seconds == 0
+
+    return
+
+  _blink = =>
+    if _seconds == 0
+      _clearBlink.call(@)
+      return
+
+    if _seconds <= 10
+      _$timer.toggleClass('warning')
+      return
 
     return
 
@@ -94,14 +106,15 @@ class window.Timer
       ion.sound.play('pop22-2')
       _$logo.trigger('stopRumble')
 
-  _blink = =>
-    if _seconds == 0
-      _$timer.removeClass('warning')
-      clearInterval(_blinkId)
-
-      return
-
-    if _seconds <= 10
-      _$timer.toggleClass('warning')
-
     return
+
+  _clearCountdown = =>
+    clearInterval(_countdownId)
+    return
+
+  _clearBlink = =>
+    _$timer.removeClass('warning')
+    clearInterval(_blinkId)
+
+  _clearEffect = =>
+    _$logo.trigger('stopRumble')
