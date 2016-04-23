@@ -3,13 +3,13 @@
 .selection__item
   .selection__item__heading
     - if klass
-      %i{ class: klass }
-    %span= title
+      i class=klass
+    span= title
   .selection__item__content
     - if items.present?
       .row
         - items = data.selections.send(items)
         .col-sm-12
-          %ol
+          ol
             - items.each do |item|
-              %li= item
+              li= item

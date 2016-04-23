@@ -27,7 +27,6 @@ end
 # Helpers
 ###
 
-# Methods defined in the helpers block are available in templates
 module MiddlemanHelper
   def favorite_items(title, key, is_divided = true)
     locals = { title: title, items: key, is_divided: is_divided }
@@ -44,7 +43,7 @@ module MiddlemanHelper
   end
 
   def n2br(string)
-    string.gsub("\n", "<br />").html_safe
+    string.gsub("\n", '<br />').html_safe
   end
 end
 
@@ -55,8 +54,24 @@ end
 # Build-specific configuration
 configure :build do
   # Minify CSS on build
-  activate :minify_css
+  # activate :minify_css
 
   # Minify Javascript on build
-  activate :minify_javascript
+  # activate :minify_javascript
+end
+
+set :slim, format: :html
+
+activate :external_pipeline,
+  name: :webpack,
+  command: build? ?
+    './node_modules/webpack/bin/webpack.js --bail -p' :
+    './node_modules/webpack/bin/webpack.js --watch -d',
+  source: 'build',
+  latency: 1
+
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  deploy.branch = :master
+  deploy.build_before = true
 end

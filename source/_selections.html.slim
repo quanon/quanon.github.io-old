@@ -1,0 +1,23 @@
+.tab-pane#selections
+  .row
+    .col-sm-12
+      .selection__heading
+        i.fa.fa-list-ol
+        span= ' 選りすぐりの10選'
+      .selection__explanation= '※ 気分によって多少変動します。 _(:3｣∠)_'
+
+  .row
+    .col-sm-4
+      = selection_items('ミスチルの歌', 'mrchildren')
+    .col-sm-4
+      = selection_items('スピッツの歌', 'spitz')
+    .col-sm-4
+      = selection_items('水樹奈々の歌', 'nana_mizuki')
+  .row
+    .col-sm-4
+      = selection_items('飲食店', 'restaurants')
+    .col-sm-4
+      = selection_items('ポケモン', 'pokemon')
+  .row
+    .col-sm-6
+      = selection_items('アニメ・ゲームソング', 'anime_songs')

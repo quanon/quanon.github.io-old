@@ -1,0 +1,55 @@
+.title.container
+  .row
+    .col-sm-8.col-sm-offset-2
+      .title__heading.text-center
+        = 'QUANON の隠れ家'
+      .title__explanation.text-center
+        = 'QUANON ちゃんのページだよ。'
+    .col-sm-2
+
+.intro.wife.container
+  .row
+    .col-sm-6
+      .intro__heading
+        i.fa.fa-smile-o
+        span= ' 自己紹介'
+      .intro__content
+        - data.introductions.each do |introduction|
+          p= introduction
+
+    .col-sm-6
+      .wife__heading
+        i.fa.fa-heart
+        span= ' 嫁'
+      .wife__content
+        a.wife__content__name href='http://wiki.puella-magi.net/Kyoko_Sakura'
+          = '佐倉杏子'
+      img.wife__content__picture src='images/kyoko.png'
+
+.partition-20
+
+.container
+  ul.nav.nav-tabs.tabs
+    li.active
+      a.tabs__tab href='#favorites' data={ toggle: 'tab' }
+        span.tabs__tab__name= 'My Favorites'
+    li
+      a.tabs__tab href='#selections' data={ toggle: 'tab' }
+        span.tabs__tab__name= 'My Best Selection 10'
+    li
+      a.tabs__tab href='#mottos' data={ toggle: 'tab' }
+        span.tabs__tab__name= 'My Mottos'
+
+  .tab-content
+    = partial :favorites
+    = partial :selections
+    = partial :mottos
+
+    .partition
+
+    .container
+      .row
+        .col-sm-12
+          .footer.text-right
+            a href='https://twitter.com/quanon86'
+              = '@quanon86'

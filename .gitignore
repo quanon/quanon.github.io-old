@@ -19,3 +19,7 @@
 
 /vendor
 .ruby-version
+
+/node_modules
+Gemfile.backup
+Gemfile.lock.backup

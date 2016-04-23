@@ -9,13 +9,13 @@
         - divided_items = divide_array(data.favorites.send(items).sort, rows)
         - column_length = 12 / divided_items.length
         - divided_items.each do |items|
-          %div{ class: "col-sm-#{column_length}" }
-            %ul
+          div class="col-sm-#{column_length}"
+            ul
               - items.each do |item|
-                %li= item 
+                li= item
       - else
         - items = data.favorites.send(items).sort
         .col-sm-12
-          %ul
+          ul
             - items.each do |item|
-              %li= item
+              li= item

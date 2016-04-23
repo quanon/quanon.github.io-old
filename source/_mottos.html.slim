@@ -2,8 +2,8 @@
   .row
     .col-sm-12
       .motto__heading
-        %i.fa.fa-graduation-cap
-        %span= "座右の銘"
+        i.fa.fa-graduation-cap
+        span= ' 座右の銘'
 
   - divided_mottos = divide_array(data.mottos, 2)
 
@@ -11,4 +11,4 @@
     - divided_mottos.each do |mottos|
       - mottos.each do |motto|
         .col-sm-6
-          = partial :motto, locals: { motto: motto }
+          = partial(:motto, locals: { motto: motto })
