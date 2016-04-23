@@ -1,5 +1,15 @@
 import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import CleanWebpackPlugin from 'clean-webpack-plugin';
+
+const cleanPlugin = new CleanWebpackPlugin(['build']);
+const extractScssPlugin = new ExtractTextPlugin('stylesheets/[name].css');
+const extractFontPlugin = new ExtractTextPlugin('fonts/[name].ttf');
+const providePlugin = new webpack.ProvidePlugin({
+  $: 'jquery',
+  jQuery: 'jquery',
+  'window.jQuery': 'jquery'
+});
 
 export default {
   entry: {
@@ -15,7 +25,7 @@ export default {
 
   output: {
     path: `${__dirname}/build`,
-    filename: '[name].js',
+    filename: 'javascripts/[name].js',
   },
 
   module: {
@@ -27,10 +37,14 @@ export default {
       },
       {
         test: /.*\.scss$/,
-        loader: ExtractTextPlugin.extract(
+        loader: extractScssPlugin.extract(
           'style-loader',
           `css-loader!sass-loader?sourceMap&includePaths[]=${__dirname}/node_modules`
         )
+      },
+      {
+        test: /source\/fonts\/.*\.ttf$/,
+        loader: extractFontPlugin.extract('file-loader')
       },
       {
         test: /\.css$/,
@@ -59,12 +73,5 @@ export default {
     ]
   },
 
-  plugins: [
-    new ExtractTextPlugin('index.css'),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery'
-    })
-  ]
+  plugins: [cleanPlugin, extractScssPlugin, extractFontPlugin, providePlugin]
 };
