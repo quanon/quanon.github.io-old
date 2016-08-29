@@ -130,6 +130,11 @@ body {
 .motto__item__content,
 .tool__item__content {
   font-size: $font-meduim;
+  margin-bottom: 10px;
+
+  ul {
+    margin-bottom: 0;
+  }
 }
 
 .motto__item__content__saying {
