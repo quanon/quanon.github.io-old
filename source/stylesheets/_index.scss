@@ -22,12 +22,6 @@ body {
   border-radius: 100%;
 }
 
-.balloon {
-  font-size: $font-xlarge;
-  background-color: $white;
-  color: $purple;
-}
-
 .title__heading {
   font-size: $font-xxxlarge;
 }
@@ -48,6 +42,14 @@ body {
 .favorite {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  &.tabs__tab {
+    color: $purple;
+  }
 }
 
 .intro__heading,
