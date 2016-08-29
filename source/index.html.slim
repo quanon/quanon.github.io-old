@@ -32,13 +32,16 @@
   ul.nav.nav-tabs.tabs
     li.active
       a.tabs__tab href='#favorites' data={ toggle: 'tab' }
-        span.tabs__tab__name= 'My Favorites'
+        span.tabs__tab__name.visible-lg.visible-md= 'My Favorites'
+        span.tabs__tab__name.visible-xs.visible-sm: i.fa.fa-2x.fa-star
     li
       a.tabs__tab href='#selections' data={ toggle: 'tab' }
-        span.tabs__tab__name= 'My Best 10'
+        span.tabs__tab__name.visible-lg.visible-md= 'My Best 10'
+        span.tabs__tab__name.visible-xs.visible-sm: i.fa.fa-2x.fa-list-ol
     li
       a.tabs__tab href='#mottos' data={ toggle: 'tab' }
-        span.tabs__tab__name= 'My Mottos'
+        span.tabs__tab__name.visible-lg.visible-md= 'My Mottos'
+        span.tabs__tab__name.visible-xs.visible-sm: i.fa.fa-2x.fa-graduation-cap
 
   .tab-content
     = partial :favorites
