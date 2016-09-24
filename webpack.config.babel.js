@@ -1,10 +1,7 @@
 import webpack from 'webpack';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 
 const cleanPlugin = new CleanWebpackPlugin(['build']);
-const extractScssPlugin = new ExtractTextPlugin('stylesheets/[name].css');
-const extractFontPlugin = new ExtractTextPlugin('fonts/[name].ttf');
 const providePlugin = new webpack.ProvidePlugin({
   $: 'jquery',
   jQuery: 'jquery',
@@ -14,7 +11,6 @@ const providePlugin = new webpack.ProvidePlugin({
 export default {
   entry: {
     index: [
-      './source/stylesheets/site.scss',
       './source/javascripts/all.js'
     ]
   },
@@ -31,20 +27,13 @@ export default {
   module: {
     loaders: [
       {
-        test: /source\/javascripts\/.*\.js$/,
+        test: /\.js$/,
         exclude: /node_modules|\.tmp|vendor/,
         loader: 'babel-loader'
       },
       {
-        test: /.*\.scss$/,
-        loader: extractScssPlugin.extract(
-          'style-loader',
-          `css-loader!sass-loader?sourceMap&includePaths[]=${__dirname}/node_modules`
-        )
-      },
-      {
-        test: /source\/fonts\/.*\.ttf$/,
-        loader: extractFontPlugin.extract('file-loader')
+        test: /\.scss$/,
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
         test: /\.css$/,
@@ -73,5 +62,5 @@ export default {
     ]
   },
 
-  plugins: [cleanPlugin, extractScssPlugin, extractFontPlugin, providePlugin]
+  plugins: [cleanPlugin, providePlugin]
 };
