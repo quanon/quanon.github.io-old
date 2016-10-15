@@ -23,3 +23,4 @@
 /node_modules
 Gemfile.backup
 Gemfile.lock.backup
+npm-debug.log
